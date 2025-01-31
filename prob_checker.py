@@ -21,24 +21,26 @@ __modifier__ = "Isaac Deter"
 #Prints whether test case passed or failed, minor modifications to printing, and asks for file input number
 #Files should be formatted as f"prob{num}.py" num ranges from 0-99 and should always be zfilled 2 digits (ex. 04 not 4)
 
-#To get working on your computer, modify PY3_PATH to your path.
-#This can be found (in vs code) by clicking the version number in the bottom right while viewing a .py file
-
 #This program should be run on in a root directory (not in a sub-folder)
 #Running with incorrect folder organization will cause errors
-#This unfortunately also only supports windows afaik
+#This should have both windows and linux support (tested on Win10 and Github Codespaces)
+
+#If the location provided by sys.executable is not working, do the following:
+#To get working on your computer, modify PY3_PATH to your path.
+#This can be found (in vs code) by clicking the version number in the bottom right while viewing a .py file
 
 
 import argparse
 import glob
 import os
+import sys
 import re
 import subprocess
 
 # TODO: **EDIT** these paths to point to your local JDK and python
 # Set the path to the empty string ("") if you are not using that language
 JDK_PATH = ""
-PY3_PATH = r"C:\Users\bacon\AppData\Local\Programs\Python\Python312\python.exe"
+PY3_PATH = sys.executable
 
 # **DO NOT** edit these constants
 STUDENT_DIR = "student_datasets"
