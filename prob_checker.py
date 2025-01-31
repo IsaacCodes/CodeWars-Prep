@@ -265,7 +265,7 @@ def check_problem(problem_number, run_command, show_input_file):
 
         with open(INPUT_TEXT_FILE_NAME, 'r') as in_file:
             result = subprocess.run(run_command, stdin=in_file, capture_output=True)
-            formatted_stdout = result.stdout.decode().strip().replace("\r\n", "\n")
+            formatted_stdout = result.stdout.decode().replace("\r\n", "\n")
             print(formatted_stdout)
 
         if result and result.returncode != 0:
@@ -280,8 +280,7 @@ def check_problem(problem_number, run_command, show_input_file):
             
         print("".join(expected_lines))
 
-        #formatted_stdout = result.stdout.decode().strip() redeclared earlier
-        formatted_expected = "".join(expected_lines).strip().replace("\r\n", "\n")
+        formatted_expected = "".join(expected_lines).replace("\r\n", "\n")
 
         if formatted_expected == formatted_stdout:
             print("\033[0;32m" + "Passed!" + "\033[0m")
