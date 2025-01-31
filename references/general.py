@@ -1,6 +1,6 @@
-import sys
+from sys import exit
 if 1 == 1:
-  sys.exit()
+  exit()
 #This "program" is not intended to be run. It is just for copy pasting code snippets
 
 
@@ -11,7 +11,7 @@ with open("input.txt") as f:
 #Alphabet
 alpha = "abcdefghijklmnopqrstuvwxyz"
 #or
-import string
+import string #Also contains other useful strings
 print(string.ascii_lowercase)
 
 #Switch rows + columns (transpose 2d list)
@@ -19,9 +19,9 @@ print(string.ascii_lowercase)
 list1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
 list2 = [list(elem) for elem in list(zip(*list1))]
 #Use itertools.zip_longest to take longest len instead of shortest.
-import itertools
+from itertools import zip_longest
 list3 = [[1, 2], [4, 5, 6], [7, 8], [10, 11, 12]]
-list4 = [list(elem) for elem in list(itertools.zip_longest(*list3, fillvalue=-1))]
+list4 = [list(elem) for elem in list(zip_longest(*list3, fillvalue=-1))]
 
 
 #Increase recursion limit, 1000 by defualt
