@@ -1,12 +1,12 @@
 import sys
 if 1 == 1:
   sys.exit()
-#This "program" cannot / is not to be run. Just for copy pasting code snippets
+#This "program" is not intended to be run. It is just for copy pasting code snippets
 
 
-#Open file
+#Open file. Add .strip() to remove surrounding whitespace if needed
 with open("input.txt") as f:
-  txt = f.read().strip()
+  txt = f.read()
 
 #Alphabet
 alpha = "abcdefghijklmnopqrstuvwxyz"
@@ -15,10 +15,14 @@ import string
 print(string.ascii_lowercase)
 
 #Switch rows + columns (transpose 2d list)
-#Rows and columns must be of same len, otherwise lowest len is used (m*n)
+#Rows and columns must be of same len, otherwise lowest len is used
 list1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]
 list2 = [list(elem) for elem in list(zip(*list1))]
-#Use itertools.zip_longest(list1, fill_value) to take longest len instead of shortest.
+#Use itertools.zip_longest to take longest len instead of shortest.
+import itertools
+list3 = [[1, 2], [4, 5, 6], [7, 8], [10, 11, 12]]
+list4 = [list(elem) for elem in list(itertools.zip_longest(*list3, fillvalue=-1))]
+
 
 #Increase recursion limit, 1000 by defualt
 from sys import setrecursionlimit
