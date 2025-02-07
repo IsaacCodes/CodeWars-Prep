@@ -1,11 +1,11 @@
-# Various Files for CodeWars Preparation
+# Resources to use in preparation & during CodeWars 
 
-### Create a new repository using this template use the following features:
+### Create a new repository using this template to use the following features:
 
-- Automatic problem checker testing against all student datasets. 
+- An automatic problem checker that tests against all student datasets. 
   - Instructions for use are in the comments of prob_checker.py
 
-- On contest day replace student_datasets and prob01.py with your actual datasets and solutions.
-  - Existing files are only there as placeholders
+- A references folder containing various code snippets to copy paste and assist in solving problems.
 
-- The references folder contains various quick references to copy paste and assist in solving problems
+- On contest day, replace student_datasets and prob01.py with your actual datasets and problem solutions.
+  - Existing files are only there as placeholders
