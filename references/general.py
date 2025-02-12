@@ -4,10 +4,6 @@ if 1 == 1:
 #This "program" is not intended to be run. It is just for copy pasting code snippets
 
 
-#Open file. Add .strip() to remove surrounding whitespace if needed
-with open("input.txt") as f:
-  txt = f.read()
-
 #Alphabet
 alpha = "abcdefghijklmnopqrstuvwxyz"
 #or
