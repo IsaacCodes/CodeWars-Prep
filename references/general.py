@@ -92,3 +92,9 @@ def zfillright(n, zeros):
 zfillright(1.2, 2)
 #Left zfill
 str(34).zfill(4)
+
+#Date conversion from string to datetime object
+# %Y is year, %m is month, %d is day
+from datetime import datetime
+time_str = "2024-8-20"
+time_t = datetime.strptime(time_str, "%Y-%m-%d")
