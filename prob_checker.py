@@ -37,9 +37,10 @@ import sys
 import re
 import subprocess
 
-# TODO: **EDIT** these paths to point to your local python version (if needed)
-# Set the path to the empty string ("") if you are not using that language
-JDK_PATH = "" #Not supported, keep empty
+
+#JDK_PATH is not supported, keep empty
+JDK_PATH = ""
+#Unless not working as described above, these should not need to be editted.
 PY3_PATH = sys.executable
 
 # **DO NOT** edit these constants
