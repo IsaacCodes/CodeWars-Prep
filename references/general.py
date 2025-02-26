@@ -4,12 +4,22 @@ from sys import exit
 exit()
 
 
+
+#Increase recursion limit (1000 by defualt)
+from sys import setrecursionlimit
+setrecursionlimit(1500)
+
+
 #Alphabet
 alpha = "abcdefghijklmnopqrstuvwxyz"
 #or
 import string #Also contains other useful strings
 print(string.ascii_lowercase)
 
+
+#Convert from unicode characters to integers and vice versa
+unicode_int = ord("A") # 65
+unicode_char = chr(65) # 'A'
 
 #Switch rows + columns (transpose 2d list)
 #Rows and columns must be of same len, otherwise lowest len is used
@@ -22,11 +32,6 @@ list3 = [[1, 2], [4, 5, 6], [7, 8], [10, 11, 12]]
 list4 = [list(elem) for elem in list(zip_longest(*list3, fillvalue=-1))]
 
 
-#Increase recursion limit (1000 by defualt)
-from sys import setrecursionlimit
-setrecursionlimit(1500)
-
-
 #Convert lists to dicts using zip or comprehension
 keys = ["a", "b", "c"]
 values = ["one", "two", "three"]
@@ -34,7 +39,7 @@ dict1 = dict(zip(keys, values))
 dict2 = {keys[i] : values[i] for i in range(len(keys))}
 
 
-#Custom sorting (ex. sort integer-strings by magnitude)
+#Custom sorting (ex. sort numeric strings by magnitude)
 list1 = ["1", "34", "-100", "900", "5", "-343"]
 sorted(list1, key=lambda x: abs(int(x)))
 
