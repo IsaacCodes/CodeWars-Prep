@@ -14,12 +14,13 @@ setrecursionlimit(1500)
 alpha = "abcdefghijklmnopqrstuvwxyz"
 #or
 import string #Also contains other useful strings
-print(string.ascii_lowercase)
+alpha = string.ascii_lowercase
 
 
 #Convert from unicode characters to integers and vice versa
 unicode_int = ord("A") # 65
 unicode_char = chr(65) # 'A'
+
 
 #Switch rows + columns (transpose 2d list)
 #Rows and columns must be of same len, otherwise lowest len is used
@@ -99,11 +100,25 @@ def n_to_base(n, base):
 
 n = 3
 #Fill the number with 0's to the left until n digits
-print("12".zfill(3)) # '012'
+"12".zfill(3) # '012'
 
-#Fill the number with 0's to the right after the decimal place until n digits
-print(f"{12:.{n}f}") # '12.000'
+#Fill the number with 0's after the decimal place until n digits
+f"{12:.{n}f}" # '12.000'
 
+
+#When rounding to the nearest integer
+round(1.1) # 1
+round(1.5) # 2
+round(-1.6) # -2
+#When rounding to n decimal places
+n = 2
+round(1.568, n) # 1.57
+
+#When truncating to an integer
+int(1.568) # 1
+#When truncating to n decimal places
+n = 2
+int(1.568 * 10**n) / 10**n # 1.56
 
 #Date conversion from string to datetime object
 # %Y is year, %m is month, %d is day
