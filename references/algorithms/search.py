@@ -55,5 +55,6 @@ def bfs(r, c):
         for dr, dc in dir:
             nr, nc = rc+dr, cc+dc
             if not (0<=nr<N and 0<=nc<N): continue
-            queue.append((rc,cc))
+            if (nr, nc) in visited: continue
+            queue.append((nr,nc))
     return ans
