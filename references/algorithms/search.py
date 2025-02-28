@@ -1,3 +1,8 @@
+"""
+For the DFS algorithms, a visited set must be declared before the function
+For any algorithm using an adjacency list, the adjacency list must be created before calling the function (this is called adj_list in the code)
+"""
+
 #DFS for adj list
 def dfs(node):
     if node in visited: return 0
